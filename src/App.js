@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from "react";
+import { Canvas, useFrame } from "react-three-fiber";
+import { softShadows, MeshWobbleMaterial, OrbitControls } from "drei";
+import { useSpring, a } from "react-spring/three";
+import "./App.scss";
+
+softShadows();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Canvas
+      className="canvas"
+      camera={{ position: [-5, 2, 10], fov: 60 }}
+    ></Canvas>
   );
 }
-
 export default App;
+xq;
